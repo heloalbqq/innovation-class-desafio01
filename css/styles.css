@@ -136,6 +136,7 @@ header .mainContainer .searchButton.mobile-only .searchDropdown p{
     font-size: 14px;
 }
 
+
 @media (max-width: 768px) {
   header .mainContainer .searchContainer.mobile-only {
     display: flex;
@@ -230,3 +231,212 @@ header .mainContainer .cartWrapper .cartCount {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+    header .mainContainer{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    header .mainContainer .mobile-top-row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header .mainContainer .logo.mobile-logo{
+        display: block;
+    }
+
+    header .mainContainer .logo.desktop-only {
+        display: none;
+    }
+
+    header .mainContainer .mobile-only{
+        display: block;
+    }
+
+    header .mainContainer .searchContainer.desktop-only{
+        display: none;
+    }
+
+    header .mainContainer .searchContainer.mobile-only{
+        display: flex;
+        width: 100%;
+        margin-top: 8px;
+        position: relative;
+    }
+
+    header .mainContainer .searchContainer.mobile-only input{
+        padding: 12px 36px 12px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    header .mainContainer .searchContainer.mobile-only .searchButton{
+        position: relative;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    header .mainContainer .searchContainer.mobile-only .searchButton img {
+        width: 18px;
+        height: 18px;
+    }
+
+    header .mainContainer .clientContainer.desktop-only{
+        display: none;
+    }
+
+    header .mainContainer .mobile-cart{
+        display: block;
+    }
+
+    header .mainContainer .menuIcon {
+        display: block;
+    }
+}
+
+header .menuContainer {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+header .menuContainer .menuWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+header .menuContainer .menuWrapper:hover img {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(300%) hue-rotate(210deg) brightness(90%) contrast(100%);
+}
+
+header .menuContainer .menuWrapper img{
+    width: 16px;
+    height: 12px;
+}
+
+header .menuContainer .menuWrapper h2:hover {
+  color: #005CFF;
+}
+
+header .menuContainer .menuWrapper h2{
+    font-size: 14px;
+    font-weight: 700;
+    color: #303030;
+}
+
+header .menuContainer .categoryWrapper{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+header .menuContainer .categoryWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+header .menuContainer .categoryWrapper a{
+    color: #303030;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+header .menuContainer .categoryWrapper a:hover {
+  color: #005CFF;
+}
+
+header .menuContainer .megaDropdown{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 1260px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    border-radius: 8px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+}
+
+header .menuContainer .megaDropdown:not([style*="display: flex"]) {
+    opacity: 0;
+    visibility: hidden;
+    display: flex !important;
+
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar{
+    width: 200px;
+    background: #F5F5F5;
+    padding: 20px 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #005CFF #F5F5F5;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar::-webkit-scrollbar-thumb {
+  color: #005CFF;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #656565;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar p:hover{
+    color: #005CFF;
+}
+
+header .menuContainer .megaDropdown .dropdownSidebar p:hover .chevron {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(3000%) hue-rotate(210deg) brightness(90%) contrast(100%);
+
+}
+
+header .menuContainer .megaDropdown .categoryColumns {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 24px;
+  gap: 127px;
+  width: 100%;
+}
+
+/* 385
