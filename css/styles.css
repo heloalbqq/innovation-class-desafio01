@@ -17,12 +17,13 @@ header{
 }
 
 header .cupomContainer{
-    background: linear-gradient(90deg, #005CFF 0%, #6b03fc 100%);
+    background: #005CFF;
     padding: 8px 0;
     text-align: center;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
+    line-height: 22px;
 }
 
 header .cupomContainer .valor {
@@ -78,7 +79,7 @@ header .mainContainer .searchContainer.desktop-only{
 }
 
 header .mainContainer .searchContainer.mobile-only {
-    display: nome;
+    display: none;
     width: 100%;
     position: relative;
 }
@@ -111,7 +112,7 @@ header .mainContainer .searchContainer.mobile-only .searchButton {
     cursor: pointer;
 }
 
-head .mainContainer .searchContainer.mobile-only .searchButton img{
+header .mainContainer .searchContainer.mobile-only .searchButton img{
     width: 18px;
     height: 18px;
 
@@ -232,6 +233,9 @@ header .mainContainer .cartWrapper .cartCount {
 }
 
 @media (max-width: 768px) {
+
+    
+
     header .mainContainer{
         flex-direction: column;
         gap: 16px;
@@ -299,6 +303,16 @@ header .mainContainer .cartWrapper .cartCount {
     header .mainContainer .menuIcon {
         display: block;
     }
+}
+header .cupomContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+header .cupomContainer p{
+  max-width: 346px;
+  margin: 0;
+  text-align: center;
 }
 
 header .menuContainer {
@@ -503,11 +517,8 @@ header .menuContainer .categoryWrapper a:hover ~ .megaDropdown .dropdownSidebar,
 header .menuContainer .megaDropdown:hover .dropdownSidebar {
   display: none;
 }
-@media (max-width: 390px) {
-  header .cupomContainer {
-    padding: 6px 0;
-    font-size: 12px;
-  }
+@media (max-width: 720px) {
+  
   header .cupomContainer .valor, header .cupomContainer .cupom {
     font-size: 11px;
   }
@@ -602,6 +613,7 @@ main html, main body {
   width: 100%;
 }
 @media (max-width: 768px) {
+
   main .hero-carousel {
     margin-bottom: 48px;
   }
@@ -885,6 +897,16 @@ main .itemDescriptionSection .container {
   padding: 0 24px;
 }
 @media (max-width: 768px) {
+
+
+  header .cupomContainer p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+  }
+
   main .itemDescriptionSection .container {
     padding: 0;
   }
