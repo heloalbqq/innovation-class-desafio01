@@ -278,7 +278,7 @@ header .mainContainer .cartWrapper .cartCount {
     }
 
     header .mainContainer .searchContainer.mobile-only .searchButton{
-        position: relative;
+        position: absolute;
         right: 8px;
         top: 50%;
         transform: translateY(-50%);
@@ -310,10 +310,17 @@ header .cupomContainer{
   }
 
 header .cupomContainer p{
-  max-width: 346px;
+  width: 546px;
+  height: 22px;
   margin: 0;
   text-align: center;
+  white-space: nowrap;
 }
+
+header .cupomContainer p br{
+  display: none;
+}
+
 
 header .menuContainer {
     width: 100%;
@@ -371,7 +378,7 @@ header .menuContainer .categoryWrapper a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    padding: 4px 0;
+    padding: 4px 9px;
     position: relative;
     white-space: nowrap;
 }
@@ -613,6 +620,16 @@ main html, main body {
   width: 100%;
 }
 @media (max-width: 768px) {
+
+  header .cupomContainer p{
+    width: auto;
+    height: auto;
+    white-space: normal;
+  }
+
+  header .cupomContainer p br{
+    display: block;
+  }
 
   main .hero-carousel {
     margin-bottom: 48px;
@@ -967,7 +984,7 @@ main .itemDescriptionSection .itemDescriptionWrapper .textContent {
 }
 main .itemDescriptionSection .itemDescriptionWrapper .textContent h2 {
   color: #303030;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -982,7 +999,7 @@ main .itemDescriptionSection .itemDescriptionWrapper .textContent h2 {
 }
 main .itemDescriptionSection .itemDescriptionWrapper .textContent p {
   color: #303030;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
   letter-spacing: 0.05em;
